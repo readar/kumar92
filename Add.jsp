@@ -89,10 +89,56 @@
 </tr>
 </table>
 
-  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+	<form:form class="form-horizontal" action="productadd"
+		commandName="product" method="post">
+		<center>
+			<table>
+				<tr>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2" path="name" for="name"><font
+							color="white">Product-Name:</font></label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" id="name" path="name"
+								placeholder="Enter your productname here" required />
+						</div>
+
+					</div>
+
+				</tr>
+				<div class="form-group">
+					<label class="control-label col-sm-2" path="description"
+						for="description"><font color="white">Product-Description:</font></label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" id="description"
+							path="description"
+							placeholder="Enter your Product Description here" required />
+					</div>
+
+				</div>
+                  </tr>
+
+
+				<tr>
+					<td colspan="2"><input type="submit" value="Add Product"></td>
+
+					<td colspan="2"><input type="reset" value="Reset"></td>
+
+				</tr>
+
+			</table>
+		</center>
+	</form:form>
+
+
 </body>
 </html>
-
-
-
-
