@@ -7,14 +7,11 @@ import com.base.model.User;
 public interface UserDAO {
 	
 	public List<User> list();
-
-	public User get(String username);
-
+	public User get(int id);
 	public void saveOrUpdate(User user);
-
-	public void delete(String username);
+	public void delete (int d);
+	public User getusername(String name);
+	public boolean isvaliduser(String user, String pass,boolean isAdmin);
 	
-	public boolean isValidUser(String username, String password,boolean isAdmin);
-
 	
 }

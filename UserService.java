@@ -14,17 +14,12 @@ public class UserService {
 	@Autowired
 	UserDAO	userDAO;
 	
-	public boolean isValidUser(String user,String pass,boolean isAdmin)
+	 public boolean isvaliduser(String user,String pass,boolean isAdmin)
 	 {
-		 return userDAO.isValidUser(user, pass, isAdmin);
+		 System.out.println("Welcome to Novel store");
+		 return userDAO.isvaliduser(user, pass, isAdmin);
 		 
 	 }
-	
-	public User get(String username)
-	{
-		return userDAO.get(username);
-		
-	}
 	public void saveOrUpdate(User user)
 	{
 		userDAO.saveOrUpdate(user);	
@@ -34,10 +29,19 @@ public class UserService {
 		List<User> list=userDAO.list();
 		return list;
 	}
-	public void delete(String username)
+	public User get(int id)
 	{
-		userDAO.delete(username);
+		return userDAO.get(id);
 	}
+	public User getusername(String name)
+	{
+		return userDAO.getusername(name);
+	}
+	public void delete(int id)
+	{
+		userDAO.delete(id);
+	}
+
 
 
 }
