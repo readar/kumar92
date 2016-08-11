@@ -24,8 +24,8 @@ public class User {
 	public String Password;
 	public String email;
 	public boolean isAdmin;
-	public boolean isUser;
-	public String login;
+
+	
 	
 	public int getId() {
 		return id;
@@ -70,23 +70,12 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public boolean getIsAdmin() {
+	public boolean isAdmin() {
 		return isAdmin;
 	}
-	public void setIsAdmin(boolean isAdmin) {
+	public void setAdmin(boolean isAdmin) {
 		this.isAdmin = isAdmin;
 	}
-	public String getLogin() {
-		return login;
-	}
-	public void setLogin(String login) {
-		this.login = login;
-	}
-	public boolean isUser() {
-		return isUser;
-	}
-	public void setUser(boolean isUser) {
-		this.isUser = isUser;
-	}
-
+	
+	
 }
