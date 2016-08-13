@@ -36,12 +36,12 @@ font-size:20px;
 <br>
 <br>
 <br>
-<form action="Novels" method="post">
+<form action="register" method="post">
 
 <table>
 <tr>
 <td style="color:magenta">USERNAME:</td>
-<td><input type="text" name="txtname"></td>
+<td><input type="text" name="name"></td>
 </tr>
 <tr>
 <td style="color:magenta">PASSWORD:</td>

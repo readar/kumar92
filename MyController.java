@@ -13,9 +13,16 @@ public class MyController {
 		System.out.println("Welcome is from controller");
 		return v1;
 	}
-	@RequestMapping("/Novels")
+	@RequestMapping("/Admin")
+	public ModelAndView displayadminpage(){
+		ModelAndView v1=new ModelAndView("Admin");
+		System.out.println("Welcome is from controller");
+		return v1;
+	}
+	
+	@RequestMapping("/Home")
 	public ModelAndView displayHomepage(){
-		ModelAndView q1=new ModelAndView("Novels");
+		ModelAndView q1=new ModelAndView("Welcomepage");
 		System.out.println("Novels is from controller");
 		return q1;
 	}
@@ -27,19 +34,7 @@ public class MyController {
 	}
 	
 	
-	@RequestMapping("/Log")
-	public ModelAndView displayLoginpage(){
-		ModelAndView v=new ModelAndView("Log");
-		System.out.println("Login page by controller");
-		return v;
-	}
-	@RequestMapping("/RegisterPage")
-	public ModelAndView displayRegpage(){
-		ModelAndView r1=new ModelAndView("RegisterPage");
-		System.out.println("reg page is from controller");
-		return r1;
-	}
-	
+
 	@RequestMapping("/Categories")
 	public ModelAndView displayCategoriespage(){
 		ModelAndView v2=new ModelAndView("Categories");
