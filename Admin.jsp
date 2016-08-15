@@ -26,10 +26,6 @@
           <li><a href="#">kids</a></li>
         </ul>
       </li>
-        <li><a href="Product"><b>Product</b> </a></li>
-        <li><a href="#"><b>Brand</b></a></li>
-   <li><a href="#"><b>Accessories</b></a></li>
-
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="Admin"><span class="glyphicon glyphicon-user"></span><b></b></a></li>
@@ -49,7 +45,7 @@
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Manage Categories
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><a href="#">Add</a></li>
+      <li><a href="cat">Add</a></li>
       <li><a href="#">Delete</a></li>
       <li><a href="#">Update</a></li>
  <li><a href="#">View all</a></li>
@@ -63,7 +59,7 @@
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Manage Products
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><a href="Add">Add</a></li>
+      <li><a href="add">Add</a></li>
       <li><a href="#">Delete</a></li>
       <li><a href="#">Update</a></li>
  <li><a href="#">View all</a></li>
@@ -78,7 +74,7 @@
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Manage Supplier
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><a href="#">Add</a></li>
+      <li><a href="sup">Add</a></li>
       <li><a href="#">Delete</a></li>
       <li><a href="#">Update</a></li>
  <li><a href="#">View all</a></li>
