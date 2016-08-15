@@ -18,53 +18,52 @@ public class Product {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	private String name;
-	private String description;
-	private double price;
-	private String author;
-	
-	
-	public int getId() {
-		return id;
+
+	private int ptid;
+	private String ptname;
+	private String ptdescription;
+	private double ptprice;
+	private String ptquantity;
+	public int getPtid() {
+		return ptid;
+	}
+	public void setPtid(int ptid) {
+		this.ptid = ptid;
 	}
 	@Transient
-	private MultipartFile image;
+	private MultipartFile img;
 	
-	public MultipartFile getImage() {
-		return image;
+	public MultipartFile getImg() {
+		return img;
 	}
-	public void setImg(MultipartFile image) {
-		this.image = image;
+	public void setImg(MultipartFile img) {
+		this.img = img;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public String getPtname() {
+		return ptname;
 	}
-	public String getName() {
-		return name;
+	public void setPtname(String ptname) {
+		this.ptname = ptname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public String getPtdescription() {
+		return ptdescription;
 	}
-	public String getDescription() {
-		return description;
+	public void setPtdescription(String ptdescription) {
+		this.ptdescription = ptdescription;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public double getPtprice() {
+		return ptprice;
 	}
-	public double getPrice() {
-		return price;
+	public void setPtprice(double ptprice) {
+		this.ptprice = ptprice;
 	}
-	public void setPrice(double price) {
-		this.price = price;
+	public String getPtquantity() {
+		return ptquantity;
 	}
-	public String getAuthor() {
-		return author;
+	public void setPtquantity(String ptquantity) {
+		this.ptquantity = ptquantity;
 	}
-	public void setAuthor(String author) {
-		this.author = author;
-	}
+
 	
 	
 }
-

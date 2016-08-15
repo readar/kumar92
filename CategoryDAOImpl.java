@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,14 +25,16 @@ public class CategoryDAOImpl implements CategoryDAO {
 	
 	@Transactional
     public void saveOrUpdate(Category category) {
-		sessionFactory.getCurrentSession().saveOrUpdate(category);	
-		
+		Transaction t = sessionFactory.getCurrentSession().beginTransaction();
+
+		sessionFactory.getCurrentSession().saveOrUpdate(category);
+		t.commit();
 	}
 
 	@Transactional
 	public void delete(int id) {
 		Category category=new Category();
-		category.setId(1);
+		
 		sessionFactory.getCurrentSession().delete(category);
 		
 	}

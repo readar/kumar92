@@ -16,31 +16,34 @@ public class Supplier {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	private String name;
-	private String address;
+	private int spid;
+	private int gtid;
+	private String spname;
+	private String spaddress;
+	public int getSpid() {
+		return spid;
+	}
+	public void setSpid(int spid) {
+		this.spid = spid;
+	}
+	public int getGtid() {
+		return gtid;
+	}
+	public void setGtid(int gtid) {
+		this.gtid = gtid;
+	}
+	public String getSpname() {
+		return spname;
+	}
+	public void setSpname(String spname) {
+		this.spname = spname;
+	}
+	public String getSpaddress() {
+		return spaddress;
+	}
+	public void setSpaddress(String spaddress) {
+		this.spaddress = spaddress;
+	}
 	
 	
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	
-	
-
 }

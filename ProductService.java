@@ -2,37 +2,49 @@ package com.base.service;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.base.dao.ProductDAO;
 import com.base.model.Product;
 
+
 @Service
 public class ProductService {
+	
 	@Autowired
 	ProductDAO productDAO;
-
-	public void saveOrUpdate(Product product) {
-	productDAO.saveOrUpdate(product);
-
+	
+	@Autowired
+	SessionFactory sessionFactory;
+	public ProductService(){}
+	
+	public ProductService(SessionFactory sessionfactory){
+		sessionFactory=sessionfactory;
 	}
-
-	public Product get(int id) {
-		return productDAO.get(id);
+	
+	public void saveOrUpdate(Product product)
+	{
+		System.out.println("In productsevice");
+		productDAO.saveOrUpdate(product);	
 	}
-	public Product getProductByName(String name) {
-		return productDAO.getProductByName(name);
-	}
-
-	public void delete(int id) {
-	productDAO.delete(id);
-
-	}
-	public List<Product> list() {
-		List<Product>list=productDAO.list();
-		
+	public List<Product> list()
+	{
+		List<Product> list=productDAO.list();
 		return list;
+	}
+	public Product get(int ptid)
+	{
+		return productDAO.get(ptid);
+	}
+	public Product getProductByName(String ptname)
+	{
+		return productDAO.getProductByName(ptname);
+	}
+	public void delete(int ptid)
+	{
+		productDAO.delete(ptid);
+	}
 
-}
 }

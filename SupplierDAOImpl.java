@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,22 +18,27 @@ public class SupplierDAOImpl implements SupplierDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
+	public SupplierDAOImpl() {
+		System.out.println("SupplierDAOImpl --One");
+	}
+	
 	public SupplierDAOImpl(SessionFactory sessionFactory){
 		this.sessionFactory= sessionFactory;
 		
 	}
 @Transactional
 	public void saveOrUpdate(Supplier supplier) {
+	Transaction t = sessionFactory.getCurrentSession().beginTransaction();
+
 	sessionFactory.getCurrentSession().saveOrUpdate(supplier);
-	
-		
+	t.commit();
 	}
 
 
 @Transactional
 public void delete(int id) {
 	Supplier supplier =new Supplier();
-	supplier.setId(1);
+	
 	sessionFactory.getCurrentSession().delete(supplier);
 	
 	

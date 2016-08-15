@@ -14,20 +14,33 @@ import org.springframework.transaction.annotation.Transactional;
 import com.base.model.Product;
 
 @Repository("productDAO")
-public class ProductDAOImpl implements ProductDAO{
-
+public class ProductDAOImpl implements ProductDAO {
+	
 	@Autowired
-	private SessionFactory sessionfactory;
+	SessionFactory sessionfactory;
+	
+	public ProductDAOImpl() {
+		System.out.println("ProductDAOImpl --One");
+	}
 	public ProductDAOImpl(SessionFactory sessionfactory){
 		this.sessionfactory=sessionfactory;
 	}
 		
 		@Transactional
-		public void saveOrUpdate(Product product){
-			Transaction t=sessionfactory.getCurrentSession().beginTransaction();
+		public void saveOrUpdate(Product pd){
 			
-			sessionfactory.getCurrentSession().saveOrUpdate(product);
-		t.commit();
+			Session s=sessionfactory.getCurrentSession();
+			Transaction t=s.beginTransaction();
+			System.out.println("User dao impl" +  pd);
+			s.saveOrUpdate(pd);
+			t.commit();	
+			
+			
+			
+		//	Transaction t=sessionfactory.getCurrentSession().beginTransaction();
+			
+		//	sessionfactory.getCurrentSession().saveOrUpdate(product);
+		//t.commit();
 		
 		}
 		
@@ -57,9 +70,9 @@ public class ProductDAOImpl implements ProductDAO{
 		}
 		
 		@Transactional
-		public void delete(int id) {
+		public void delete(int ptid) {
 			Product product=new Product();
-			product.setId(id);
+			product.setPtid(ptid);
 			sessionfactory.getCurrentSession().delete(product);
 			
 		

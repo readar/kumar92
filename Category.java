@@ -17,28 +17,35 @@ public class Category {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	private String name;
-	private String description;
+	private int tgid;
+	private int spid;
+	private String tgname;
+	private String tgdescription;
+	public int getTgid() {
+		return tgid;
+	}
+	public void setTgid(int tgid) {
+		this.tgid = tgid;
+	}
+	public int getSpid() {
+		return spid;
+	}
+	public void setSpid(int spid) {
+		this.spid = spid;
+	}
+	public String getTgname() {
+		return tgname;
+	}
+	public void setTgname(String tgname) {
+		this.tgname = tgname;
+	}
+	public String getTgdescription() {
+		return tgdescription;
+	}
+	public void setTgdescription(String tgdescription) {
+		this.tgdescription = tgdescription;
+	}
 	
 	
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
+
 }
