@@ -36,7 +36,7 @@ font-size:20px;
 <br>
 <br>
 <br>
-<form action="register" method="post">
+<form action="UserCheck" method="post">
 
 <table>
 <tr>

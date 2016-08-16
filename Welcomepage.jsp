@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@include file="Header.jsp"%>
+   <%@include file="Header.jsp"%>
 <!doctype html>
 <html>
 <head>
 <title>BOOKS STORE</title>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <style>
 body{
 background-image:url("resources/images/bo10.jpg");
@@ -22,7 +23,7 @@ background-size: cover;
 <a href="Novels" style="float:right;color:red"><h3>Click here to Enter to the Site</h3></a>
 <br><br><br><br><br><br>
 <center>
-<h1 style="color:darkgreen">WELCOME TO ONLINE NOVEL STORE</h1>
+<h1 style="color:#1A5276">WELCOME TO ONLINE NOVEL STORE</h1>
 </center>
 
 

@@ -30,7 +30,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a href="Admin"><span class="glyphicon glyphicon-user"></span><b></b></a></li>
       <li><a href="SignUp"><span class="glyphicon glyphicon-user"></span><b></b></a></li>
-      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> <b>Logout</b></a></li>
+      <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span> <b>Logout</b></a></li>
     </ul>
   </div>
 </nav>

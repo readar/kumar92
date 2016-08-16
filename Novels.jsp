@@ -35,9 +35,6 @@ p {
 </style>
 </head>
 <body>
-
-<h1><i><u>REVOLUTIONARY READAR NOVELS</u></i></h1>
-<p><h5>THE BEST SITE FOR ONLINE SELLING BOOKS AVAILABLE FOR YOU</h5></p>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -45,16 +42,18 @@ p {
     </div>
     <ul class="nav navbar-nav">
       <li><a href="Welcomepage">Home</a></li>
-      <li><a href="Categories">Categories</a></li>
-      <li><a href="Authors">Authors</a></li>
-      
      </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="RegisterPage"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
-      <li><a href="Log"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="UserCheck"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
+
+<h1><i><u>REVOLUTIONARY READAR NOVELS</u></i></h1>
+<p><h5>THE BEST SITE FOR ONLINE SELLING BOOKS AVAILABLE FOR YOU</h5></p>
+
   
 <div class="container">
   <br>

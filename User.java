@@ -1,11 +1,13 @@
 package com.base.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
 
 @Entity
@@ -17,14 +19,23 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int id;
-	public String Firstname;
-	public String Middlename;
-	public String Lastname;
-	public String Username;
-	public String Password;
+	@NotEmpty(message="first name cannot be empty")
+	public String firstname;
+	@NotEmpty(message="middle name cannot be empty")
+	public String middlename;
+	@NotEmpty(message="last name cannot be empty")
+	public String lastname;
+	@NotEmpty(message="username cannot be empty")
+	public String username;
+	@NotEmpty(message="password cannot be empty")
+	public String password;
+	@NotEmpty(message="email cannot be empty")
 	public String email;
 	public boolean isAdmin;
-
+	
+	private String role;
+	@Column(name="enabled")
+	private boolean isEnabled;
 	
 	
 	public int getId() {
@@ -34,35 +45,34 @@ public class User {
 		this.id = id;
 	}
 	public String getFirstname() {
-		return Firstname;
+		return firstname;
 	}
 	public void setFirstname(String firstname) {
-		Firstname = firstname;
+		this.firstname = firstname;
 	}
 	public String getMiddlename() {
-		return Middlename;
+		return middlename;
 	}
 	public void setMiddlename(String middlename) {
-		Middlename = middlename;
+		this.middlename = middlename;
 	}
 	public String getLastname() {
-		return Lastname;
+		return lastname;
 	}
 	public void setLastname(String lastname) {
-		Lastname = lastname;
+		this.lastname = lastname;
 	}
-	
 	public String getUsername() {
-		return Username;
+		return username;
 	}
 	public void setUsername(String username) {
-		Username = username;
+		this.username = username;
 	}
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
 	public String getEmail() {
 		return email;
@@ -76,6 +86,19 @@ public class User {
 	public void setAdmin(boolean isAdmin) {
 		this.isAdmin = isAdmin;
 	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public boolean isEnabled() {
+		return isEnabled;
+	}
+	public void setEnabled(boolean isEnabled) {
+		this.isEnabled = isEnabled;
+	}
+
 	
 	
 }

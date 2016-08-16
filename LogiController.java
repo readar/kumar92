@@ -1,5 +1,7 @@
 package com.base.Controller;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -52,11 +54,24 @@ public class LogiController {
 		user.setEmail(email);
 		user.setUsername(username);	
 		user.setPassword(password);
+		user.setEnabled(true);
+		user.setRole("ROLE_USER");
 
 		System.out.println("in register controller");
 		us.saveOrUpdate(user);
 		ModelAndView mv = new ModelAndView("Log");
 		return mv;
+	}
+	
+	@RequestMapping("/UserCheck")
+	public ModelAndView usercheck(Principal principal){
+		System.out.println("it is of usercheck");
+		return new ModelAndView("Novels");
+	}
+	@RequestMapping("/AdminCheck")
+	public ModelAndView admincheck(Principal principal){
+		System.out.println("it is of admincheck");
+		return new ModelAndView("Admin");
 	}
 	
     
