@@ -2,14 +2,19 @@ package com.base.Controller;
 
 import java.security.Principal;
 
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.base.model.Product;
 import com.base.model.User;
 import com.base.service.UserService;
 
@@ -21,7 +26,7 @@ public class LogiController {
 		
 	@RequestMapping("/RegisterPage")
 	public ModelAndView displayReg(){
-		ModelAndView r1=new ModelAndView("RegisterPage");
+		ModelAndView r1=new ModelAndView("RegisterPage","user",new User());
 		System.out.println("reg page is from logicontroller");
 		return r1;
 	}
@@ -36,27 +41,13 @@ public class LogiController {
 		
 		return mv;
 	}
-	@RequestMapping("/register")
-	public ModelAndView register(
-			@ModelAttribute User user,
-			@RequestParam(value = "firstname") String fname,
-			@RequestParam(value = "middlename") String mname,
-			@RequestParam(value = "lastname") String lname,
-			@RequestParam(value = "email") String email,
-			@RequestParam(value = "username") String username,
-			@RequestParam(value = "password") String password,
-			@RequestParam(value = "hb")String hb1,	
-			@RequestParam(value = "hbb")String hb2	
-			 ) {
-		user.setFirstname(fname);
-		user.setMiddlename(mname);
-		user.setLastname(lname);
-		user.setEmail(email);
-		user.setUsername(username);	
-		user.setPassword(password);
-		user.setEnabled(true);
-		user.setRole("ROLE_USER");
-
+	@RequestMapping(value="/register",method=RequestMethod.POST)
+	public ModelAndView register(@Valid@ModelAttribute("user") User user,BindingResult bindingResult)
+    {	
+		if(bindingResult.hasErrors())
+		{
+			return new ModelAndView("RegisterPage");
+		}
 		System.out.println("in register controller");
 		us.saveOrUpdate(user);
 		ModelAndView mv = new ModelAndView("Log");
@@ -72,6 +63,11 @@ public class LogiController {
 	public ModelAndView admincheck(Principal principal){
 		System.out.println("it is of admincheck");
 		return new ModelAndView("Admin");
+	}
+	@RequestMapping("/logout")
+	public ModelAndView logout(Principal principal,HttpSession session){
+		session.invalidate();
+		return new ModelAndView("logout");
 	}
 	
     

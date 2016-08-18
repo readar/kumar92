@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Blog Page</title>
+<title>Product Page</title>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
 <script	src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -16,7 +16,7 @@ function MyController($scope, $http) {
 
 	 $scope.sortType = 'name'; // set the default sort type
 	  $scope.sortReverse = false;  // set the default sort order
-	  $scope.searchBTitle = '';
+	  $scope.searchPTitle = '';
 	  
         $scope.getDataFromServer = function() {
                 $http({
@@ -53,43 +53,62 @@ function MyController($scope, $http) {
     <thead>
       <tr>
       <td>
-          <a href="#" ng-click="sortType = 'prd_id'; sortReverse = !sortReverse">
+          <a href="#" ng-click="sortType = 'ptid'; sortReverse = !sortReverse">
             Product Id 
-            <span ng-show="sortType == 'id' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'id' && sortReverse" class="fa fa-caret-up"></span>
+            <span ng-show="sortType == 'ptid' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'ptid' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
         
         <td>
-          <a href="#" ng-click="sortType = 'prd_name'; sortReverse = !sortReverse">
+          <a href="#" ng-click="sortType = 'ptname'; sortReverse = !sortReverse">
             Product Name 
-            <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+            <span ng-show="sortType == 'ptname' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'ptname' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
         <td>
-          <a href="#" ng-click="sortType = 'qty'; sortReverse = !sortReverse">
-          Product Description
-            <span ng-show="sortType == 'description' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'description' && sortReverse" class="fa fa-caret-up"></span>
+          <a href="#" ng-click="sortType = 'ptquantity'; sortReverse = !sortReverse">
+          Quantity
+            <span ng-show="sortType == 'ptquantity' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'ptquantity' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
         <td>
-          <a href="#" ng-click="sortType = 'price'; sortReverse = !sortReverse">
-          Product Price
-            <span ng-show="sortType == 'price' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'price' && sortReverse" class="fa fa-caret-up"></span>
+          <a href="#" ng-click="sortType = 'ptprice'; sortReverse = !sortReverse">
+          Price
+            <span ng-show="sortType == 'ptprice' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'ptprice' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'ptauthor'; sortReverse = !sortReverse">
+          Author
+            <span ng-show="sortType == 'ptauthor' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'ptauthor' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = img'; sortReverse = !sortReverse">
+          Image
+            <span ng-show="sortType == 'img' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'img' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
         </tr>
     </thead>
     
     <tbody>
-      <tr ng-repeat="p1 in product | orderBy:sortType:sortReverse | filter:searchPTitle">
-           		<td>{{p1.id}}</td>
-           		<td>{{p1.name}}</td>
-           		<td>{{p1.description}}</td>
-           		<td>{{p1.price}}</td>
+      <tr ng-repeat="p1 in prod | orderBy:sortType:sortReverse | filter:searchPTitle">
+           		<td>{{p1.ptid}}</td>
+           		<td>{{p1.ptname}}</td>
+           		<td>{{p1.ptquantity}}</td>
+           		<td>{{p1.ptprice}}</td>
+           		<td>{{p1.ptauthor}}</td>
+           		<td>{{p1.img}}</td>
+           		<td><img src="resources/images/{p1.ptname}.jpg" style="width: 200px;height:150px"></td>
+           		<td><a href="deleteItem?ptid={{p1.ptid}}">Edit</a></td>
+           		<td><a href="deleteItem?ptid={{p1.ptid}}">Delete</a></td>
            		
            	
       </tr>

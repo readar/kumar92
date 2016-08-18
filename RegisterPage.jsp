@@ -22,7 +22,7 @@
 <br><br><br><br><br><br><br><br><br>
 <center><h2><font color="magenta">Sign Up!</font></h2></center>
 
- <form method ="post" action="register">
+ <!--<form method ="post" action="register">
    <center>
    <table width="350">
    <tr><td><font color="magenta"><h4>FirstName:</h4></font></td><td> <input type="text" name = "firstname" placeholder="Enter your firstname here"></td></tr>
@@ -39,7 +39,40 @@
       
       </table>
       </center>
-      </form>
+      </form>-->
+      
+      <form:form action="register" commandName="user" method="POST">
+<table>
+<tr>
+<td>FirstName : </td>
+<td><form:input path="firstname" /><form:errors path="firstname" style="color:red"></form:errors></td>
+</tr>
+<tr>
+<td>MiddleName : </td>
+<td><form:input path="middlename" /><form:errors path="middlename" style="color:red"></form:errors></td>
+</tr>
+<tr>
+<td>LastName : </td>
+<td><form:input path="lastname" /><form:errors path="lastname" style="color:red"></form:errors></td>
+</tr>
+<tr>
+<td>UserName : </td>
+<td><form:input path="username" /><form:errors path="username" style="color:red"></form:errors></td>
+</tr>
+<tr>
+<td>Password : </td>
+<td><form:password path="password"/><form:errors path="password" style="color:red"></form:errors></td></tr>
+<tr>
+<td>EmaiId :</td>
+<td><form:input path="email"/><form:errors path="email" style="color:red"></form:errors></td></tr>
+
+<tr colspan="2">
+<td><input type="submit" value="Register"></td>
+<td><input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form:form>
+      
       
 </body>
 </html>

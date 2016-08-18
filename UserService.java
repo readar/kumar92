@@ -9,7 +9,7 @@ import com.base.dao.UserDAO;
 import com.base.model.User;
 
 @Service
-public class UserService {
+public class UserService implements UserServiceInterface {
 	
 	@Autowired
 	UserDAO	userDAO;

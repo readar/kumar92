@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.base.model.User;
+import com.base.model.UserRole;
 
 @Repository("userDAO")
 public class UserDAOImpl implements UserDAO {
@@ -21,22 +22,24 @@ public class UserDAOImpl implements UserDAO {
 	public UserDAOImpl() {
 		System.out.println("UserDAOImpl --One");
 	}
-
 	public UserDAOImpl(SessionFactory sessionFactory) {
 
 		this.sessionFactory = sessionFactory;
 		System.out.println("Inside UserDAOImpl");
 	}
-
 	@Transactional
 	public void saveOrUpdate(User user) {
-		Transaction t = sessionFactory.getCurrentSession().beginTransaction();
-
-		sessionFactory.getCurrentSession().saveOrUpdate(user);
-		t.commit();
-
+		Session session=sessionFactory.getCurrentSession();
+		Transaction tx=session.beginTransaction();
+		user.setEnabled(true);
+		session.save(user);
+		UserRole userRole=new UserRole();
+		userRole.setId(user.getId());
+		userRole.setAuthority("ROLE_USER");
+		session.save(userRole);
+		System.out.println("Done saving user");
+		tx.commit();
 	}
-
 	@Transactional
 	public void delete(int id) {
 		User user = new User();

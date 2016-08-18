@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<% 
+session.invalidate();
+%>
 <br><br>
 <center><h1>YOU HAVE SUCCESFULLY LOGGED OUT</h1></center>
 
