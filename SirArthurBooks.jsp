@@ -17,19 +17,19 @@ background-color:lightblue;
 <div class="container">
      <div class="row">
     <div class="col-md-4">
-      <a href="resources/images/sir1.jpg" class="thumbnail">
+      <a href="sher" class="thumbnail">
         <img src="resources/images/sir1.jpg" alt="thrilling"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/sir2.jpg" class="thumbnail">
+      <a href="advnsher" class="thumbnail">
         <img src="resources/images/sir2.jpg" alt="comic"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/sir3.jpg" class="thumbnail">
+      <a href="greatboer" class="thumbnail">
         
         <img src="resources/images/sir3.jpg" alt="fantsy"  style="width:500px;height:420px">
       </a>

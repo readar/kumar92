@@ -61,7 +61,7 @@
     <ul class="dropdown-menu">
       <li><a href="add">Add</a></li>
       <li><a href="#">Delete</a></li>
-      <li><a href="#">Update</a></li>
+      
  <li><a href="#">View all</a></li>
     </ul>
   </div>

@@ -46,16 +46,10 @@ public class ProductDAOImpl implements ProductDAO {
 		
 	    @Transactional
 		public Product get(int id) {
-			String hql = "from Product where id=" + "'"+ id +"'";
-			//  from supplier where id = '101'
-			Query query =  sessionfactory.getCurrentSession().createQuery(hql);
-			@SuppressWarnings("unchecked")
-			List<Product> listproduct = (List<Product>) query.list();
-			
-			if (listproduct != null && !listproduct.isEmpty()) {
-				return listproduct.get(0);
-			}
-			return null;
+	    	Session session=sessionfactory.getCurrentSession();
+			Transaction transaction=session.beginTransaction();
+			Product product=session.load(Product.class,new Integer(id));
+			return product;
 		}
 	    @Transactional
 		public Product getProductByName(String name) {
@@ -71,9 +65,19 @@ public class ProductDAOImpl implements ProductDAO {
 		
 		@Transactional
 		public void delete(int ptid) {
-			Product product=new Product();
-			product.setPtid(ptid);
-			sessionfactory.getCurrentSession().delete(product);
+			
+			System.out.println("Id in deleteProduct(int ptid):"+ptid);
+			
+		    Session session=sessionfactory.getCurrentSession();
+		    Transaction tx=session.beginTransaction();
+		    Product product = (Product)session.load(Product.class, ptid);
+		 //   Query query=session.createQuery("delete from Product  where ptid=:status");
+		  //  query.setInteger("status",ptid);
+		  //  int rowsDeleted=query.executeUpdate();
+		    session.delete(product);
+		  tx.commit();
+		   // System.out.println("Rows deleted:"+rowsDeleted);
+		    System.out.println("deleted");
 			
 		
 		}
@@ -81,12 +85,21 @@ public class ProductDAOImpl implements ProductDAO {
 		
 		@Transactional
 			public List<Product> list() {
-				@SuppressWarnings("unchecked")
-				List<Product> listProduct = (List<Product>) 
-				          sessionfactory.getCurrentSession()
-						.createCriteria(Product.class)
-						.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
+			Session s = sessionfactory.getCurrentSession();
+			Transaction tx = s.beginTransaction();
+			List<Product> listProduct = s.createCriteria(Product.class).list();
+			
 				return listProduct;
 			}
+		public void manageProduct(Product product) {
+			
+			
+			Session session=sessionfactory.getCurrentSession();
+			Transaction transaction=session.beginTransaction();
+			session.update(product);
+			transaction.commit();
+			System.out.println("updated");
+		}
+		
 
 }

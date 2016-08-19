@@ -23,6 +23,13 @@ public class MyController {
 	@RequestMapping("/Home")
 	public ModelAndView displayHomepage(){
 		ModelAndView q1=new ModelAndView("Welcomepage");
+		System.out.println("welcome is from controller");
+		return q1;
+	}
+	
+	@RequestMapping("/Novels")
+	public ModelAndView displaynovelpage(){
+		ModelAndView q1=new ModelAndView("Novels");
 		System.out.println("Novels is from controller");
 		return q1;
 	}
@@ -74,16 +81,16 @@ public class MyController {
 		System.out.println("children also from controller");
 		return v7;
 	}	
-	@RequestMapping("/Biog")
+	@RequestMapping("/fearstreet")
 	public ModelAndView displayBiopage(){
-		ModelAndView v8=new ModelAndView("Biog");
-		System.out.println("Biography also from controller");
+		ModelAndView v8=new ModelAndView("fearstreet");
+		System.out.println("fearstreet also from controller");
 		return v8;
 	}	
-	@RequestMapping("/Award")
+	@RequestMapping("/inheart")
 	public ModelAndView displayAwardpage(){
-		ModelAndView v9=new ModelAndView("Award");
-		System.out.println("Award also from controller");
+		ModelAndView v9=new ModelAndView("inheart");
+		System.out.println("inheart also from controller");
 		return v9;
 	}	
 	@RequestMapping("/ChetanBooks")
@@ -98,10 +105,10 @@ public class MyController {
 		System.out.println("RKnarayanBooks also from controller");
 		return r2;
 	}
-	@RequestMapping("/Ronaldsegalbooks")
+	@RequestMapping("/devilgate")
 	public ModelAndView displayRonaldsegalbookspage(){
-		ModelAndView r3=new ModelAndView("Ronaldsegalbooks");
-		System.out.println("Ronaldsegalbooks also from controller");
+		ModelAndView r3=new ModelAndView("devilgate");
+		System.out.println("devilgate also from controller");
 		return r3;
 	}
 	@RequestMapping("/SirArthurBooks")
@@ -128,10 +135,10 @@ public class MyController {
 		System.out.println("Adventure also from controller");
 		return r7;
 	}
-	@RequestMapping("/Business")
+	@RequestMapping("/icefor")
 	public ModelAndView displayBusinesspage(){
-		ModelAndView r8=new ModelAndView("Business");
-		System.out.println("SirArthurBooks also from controller");
+		ModelAndView r8=new ModelAndView("icefor");
+		System.out.println("icefor also from controller");
 		return r8;
 	}
 	@RequestMapping("/Horror")
@@ -139,6 +146,30 @@ public class MyController {
 		ModelAndView r9=new ModelAndView("Horror");
 		System.out.println("Horror also from controller");
 		return r9;
+	}
+	@RequestMapping("/storm")
+	public ModelAndView displaystormpage(){
+		ModelAndView r8=new ModelAndView("storm");
+		System.out.println("storm also from controller");
+		return r8;
+	}
+	@RequestMapping("/gonegirl")
+	public ModelAndView displaygonegirlpage(){
+		ModelAndView r8=new ModelAndView("gonegirl");
+		System.out.println("gonegirl also from controller");
+		return r8;
+	}
+	@RequestMapping("/beforei")
+	public ModelAndView displaybeforei(){
+		ModelAndView r8=new ModelAndView("beforei");
+		System.out.println("beforei also from controller");
+		return r8;
+	}
+	@RequestMapping("/pride")
+	public ModelAndView displaypride(){
+		ModelAndView r8=new ModelAndView("pride");
+		System.out.println("pride also from controller");
+		return r8;
 	}
 
 }

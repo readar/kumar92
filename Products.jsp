@@ -39,6 +39,8 @@ margin: auto;
                 <tr>
                     <td colspan="2" align="center"><h2>Manage Product</h2></td>
                 </tr>
+                
+                
                 <tr>
                     <td><form:label path="ptname">Product Name:</form:label></td>
                     <td><form:input path="ptname" /></td>
@@ -56,6 +58,11 @@ margin: auto;
                     <td><form:label path="ptquantity">Product Quantity:</form:label></td>
                     <td><form:input path="ptquantity" /></td>
                 </tr>     
+                <tr>
+                    <td><form:label path="ptauthor">Product Author:</form:label></td>
+                    <td><form:input path="ptauthor" /></td>
+                </tr> 
+                
                  
              	<tr>
                     <td><form:label path="img">Image Upload:</form:label></td>
@@ -70,7 +77,6 @@ margin: auto;
             </table>
         </form:form>
     </div>
-	</body>
+</body>
 </html>
-
 

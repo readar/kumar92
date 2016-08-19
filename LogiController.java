@@ -66,7 +66,9 @@ public class LogiController {
 	}
 	@RequestMapping("/logout")
 	public ModelAndView logout(Principal principal,HttpSession session){
+		
 		session.invalidate();
+		
 		return new ModelAndView("logout");
 	}
 	

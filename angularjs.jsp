@@ -88,14 +88,7 @@ function MyController($scope, $http) {
             <span ng-show="sortType == 'ptauthor' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
-        <td>
-          <a href="#" ng-click="sortType = img'; sortReverse = !sortReverse">
-          Image
-            <span ng-show="sortType == 'img' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'img' && sortReverse" class="fa fa-caret-up"></span>
-          </a>
-        </td>
-        </tr>
+
     </thead>
     
     <tbody>
@@ -105,9 +98,9 @@ function MyController($scope, $http) {
            		<td>{{p1.ptquantity}}</td>
            		<td>{{p1.ptprice}}</td>
            		<td>{{p1.ptauthor}}</td>
-           		<td>{{p1.img}}</td>
-           		<td><img src="resources/images/{p1.ptname}.jpg" style="width: 200px;height:150px"></td>
-           		<td><a href="deleteItem?ptid={{p1.ptid}}">Edit</a></td>
+           		
+          
+           		<td><a href="editProduct?ptid={{p1.ptid}}">Edit</a></td>
            		<td><a href="deleteItem?ptid={{p1.ptid}}">Delete</a></td>
            		
            	

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% 
+<%
 session.invalidate();
 %>
 <br><br>
