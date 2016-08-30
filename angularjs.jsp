@@ -9,6 +9,7 @@
 <script	src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+
 <script>
 var app = angular.module('myApp', []);
  
@@ -88,6 +89,21 @@ function MyController($scope, $http) {
             <span ng-show="sortType == 'ptauthor' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
+        
+<!--         <td>
+          <a href="#" ng-click="sortType = 'ptauthor'; sortReverse = !sortReverse">
+          Category
+            <span ng-show="sortType == 'category' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'category' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+                <td>
+          <a href="#" ng-click="sortType = 'ptauthor'; sortReverse = !sortReverse">
+          Supplier
+            <span ng-show="sortType == 'supplier' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'supplier' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td> -->
 
     </thead>
     
@@ -98,9 +114,10 @@ function MyController($scope, $http) {
            		<td>{{p1.ptquantity}}</td>
            		<td>{{p1.ptprice}}</td>
            		<td>{{p1.ptauthor}}</td>
+           		<!-- <td><img src="resources/images/{p1.name}.jpg" style="width: 200px;height:150px"></td> -->
            		
           
-           		<td><a href="editProduct?ptid={{p1.ptid}}">Edit</a></td>
+           		
            		<td><a href="deleteItem?ptid={{p1.ptid}}">Delete</a></td>
            		
            	

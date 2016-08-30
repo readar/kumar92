@@ -1,6 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+ <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+    
+<%@include file="Header.jsp" %>
+<%@include file="angularjs.jsp" %>
+<!--  <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Product</title>
@@ -15,6 +18,7 @@
     <link href="./resources/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="./resources/css/style.css" rel="stylesheet" media="screen">
     <script data-require="angular.js@1.0.x" src="http://code.angularjs.org/1.0.7/angular.min.js" data-semver="1.0.7"></script>
+
 
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -59,9 +63,9 @@
       </ul>
     </div>
   </div>
-</nav>-->
+</nav>
 <div>
-<!--  <center><img src="resources/images/bo10.jpg" style="width:300px;height: 300px"></center>-->
+<!--  <center><img src="resources/images/bo10.jpg" style="width:300px;height: 300px"></center>
 </div>
 <div>
 <div class="container">
@@ -75,17 +79,19 @@ Enter Product Name:  <input type="text"  ng-model="search">&nbsp&nbsp<span class
     <th>Product Description</th>
     <th>Product Author</th>
     <th>Product Price</th>
-    <th>Product  Image</th>
+  
     </tr>
-        <tr ng-repeat="resource in names | filter:search">
-            <td>{{resource.ptid}}</td>
-            <td>{{resource.ptname}}</td>
-            <td>{{resource.ptdescription}}</td>
-            <td>{{resource.ptauthor}}</td>
-            <td>{{resource.ptprice}}</td>
-            <td><img src="resources/images/{resource.ptname}.jpg" style="width: 200px;height:150px"></td>
+        <tr ng-repeat="p1 in names | filter:search">
+            <td>{{p1.ptid}}</td>
+            <td>{{p1.ptname}}</td>
+            <td>{{p1.ptdescription}}</td>
+            <td>{{p1.ptauthor}}</td>
+            <td>{{p1.ptprice}}</td>
+            <td><a href="editproduct?ptid={{p1.ptid}}">Edit</a></td>
+         <td><a href="deleteItem?ptid={{p1.ptid}}">Delete</a></td>
+           
             
-       <!--      <td><a href="deleteItem?ptid={{resource.ptid}}">Delete</a></td>--> 
+          
         </tr>    
     </table>
 </div>
@@ -101,6 +107,10 @@ angular.module('myApp',[]).controller('dataCtrl',function($scope)
 			}
 		});
 </script>
-</body>
+</div>
+</div>-->
+<br><br><br><br><br><br><br><br><br><br>
+  
+<%@include file="Footer.jsp" %>
 
-</html>
+ 

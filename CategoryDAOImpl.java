@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.base.model.Category;
+import com.base.model.Supplier;
 
 
 @Repository("categoryDAO")
@@ -23,8 +24,8 @@ public class CategoryDAOImpl implements CategoryDAO {
 		this.sessionFactory=sessionFactory;
 	}
 	
-	@Transactional
-    public void saveOrUpdate(Category category) {
+  
+	public void saveOrUpdate(Category category) {
 		Transaction t = sessionFactory.getCurrentSession().beginTransaction();
 
 		sessionFactory.getCurrentSession().saveOrUpdate(category);
@@ -51,7 +52,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 		return null;
 	}
 	
-	/*@Transactional
+	@Transactional
 	public Category get(String id) {
 		String hql="from id=" + "'"+ id +"'";
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
@@ -62,7 +63,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 		
 		return null;
-	}*/
+	}
 	
 	
 	@Transactional
@@ -73,6 +74,20 @@ public class CategoryDAOImpl implements CategoryDAO {
 				                     .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
 		return listCategory;
 		
+	}
+
+	@Transactional
+	public Category getByName(String tgname) {
+		   String hql = "from Category where tgname=" + "'"+ tgname +"'";
+			
+			Query query = (Query) sessionFactory.openSession().createQuery(hql);
+			List<Category> listCategory = (List<Category>)  query.list();
+			
+			if  (listCategory != null && !listCategory.isEmpty()){
+				return listCategory.get(0);
+				
+			}
+	   		return null;
 	}
 
 

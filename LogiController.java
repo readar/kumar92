@@ -2,7 +2,8 @@ package com.base.Controller;
 
 import java.security.Principal;
 
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.base.model.Product;
+
 import com.base.model.User;
 import com.base.service.UserService;
 
@@ -32,10 +33,10 @@ public class LogiController {
 	}
 	
 
-	@RequestMapping("/Log")
+	@RequestMapping("/log")
 	public ModelAndView Logicontroller()
 	{
-		ModelAndView mv= new ModelAndView("Log");
+		ModelAndView mv= new ModelAndView("login");
 		System.out.println("Registration control called");
 		
 		
@@ -64,13 +65,29 @@ public class LogiController {
 		System.out.println("it is of admincheck");
 		return new ModelAndView("Admin");
 	}
-	@RequestMapping("/logout")
-	public ModelAndView logout(Principal principal,HttpSession session){
+/*	@RequestMapping("/logout")
+	public ModelAndView logout(Principal principal,HttpServletRequest request){
 		
-		session.invalidate();
+	//	session.invalidate();
+		request.getSession().invalidate();
 		
 		return new ModelAndView("logout");
 	}
-	
+	*/
+/*	@RequestMapping("/logout")
+	public String logout(HttpServletRequest request)
+	{
+	request.getSession().invalidate();
+	System.out.println("logout page called");
+
+	return "Log";
+	}*/
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ModelAndView login(
+		@RequestParam(value = "error", required = false) String error,
+		@RequestParam(value = "logout", required = false) String logout){
     
+	ModelAndView mv=new ModelAndView("login");
+	return mv;
+}
 }

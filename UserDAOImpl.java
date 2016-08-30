@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.base.model.User;
 import com.base.model.UserRole;
 
+
 @Repository("userDAO")
 public class UserDAOImpl implements UserDAO {
 	@Autowired
@@ -33,7 +34,7 @@ public class UserDAOImpl implements UserDAO {
 		Transaction tx=session.beginTransaction();
 		user.setEnabled(true);
 		session.save(user);
-		UserRole userRole=new UserRole();
+	    UserRole userRole=new UserRole();
 		userRole.setId(user.getId());
 		userRole.setAuthority("ROLE_USER");
 		session.save(userRole);

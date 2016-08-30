@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
@@ -13,11 +14,10 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table
 @Component
-
 public class User {
-
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	public int id;
 	@NotEmpty(message="first name cannot be empty")
 	public String firstname;
@@ -31,9 +31,11 @@ public class User {
 	public String password;
 	@NotEmpty(message="email cannot be empty")
 	public String email;
-	public boolean isAdmin;
 	
-	private String role;
+	@Transient
+	@NotEmpty(message="password and confirmpassword should be same")
+	private String confirmpassword;
+	
 	@Column(name="enabled")
 	private boolean isEnabled;
 	
@@ -80,25 +82,18 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public boolean isAdmin() {
-		return isAdmin;
-	}
-	public void setAdmin(boolean isAdmin) {
-		this.isAdmin = isAdmin;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
 	public boolean isEnabled() {
 		return isEnabled;
 	}
 	public void setEnabled(boolean isEnabled) {
 		this.isEnabled = isEnabled;
 	}
-
+	public String getConfirmpassword() {
+		return confirmpassword;
+	}
+	public void setConfirmpassword(String confirmpassword) {
+		this.confirmpassword = confirmpassword;
+	}
 	
 	
 }

@@ -11,7 +11,7 @@ import com.base.model.Product;
 
 
 @Service
-public class ProductService {
+public class ProductService implements ProductServiceInterface {
 	
 	@Autowired
 	ProductDAO productDAO;
@@ -45,6 +45,11 @@ public class ProductService {
 	public void delete(int ptid)
 	{
 		productDAO.delete(ptid);
+	}
+
+	public void manageProduct(Product product) {
+		productDAO.manageProduct(product);
+		
 	}
 
 }

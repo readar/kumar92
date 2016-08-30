@@ -19,8 +19,14 @@ public class MyController {
 		System.out.println("Welcome is from controller");
 		return v1;
 	}
+	@RequestMapping("/cart")
+	public ModelAndView displaycartpage(){
+		ModelAndView v1=new ModelAndView("cart");
+		System.out.println("cart is from controller");
+		return v1;
+	}
 	
-	@RequestMapping("/Home")
+	@RequestMapping("/Welcomepage")
 	public ModelAndView displayHomepage(){
 		ModelAndView q1=new ModelAndView("Welcomepage");
 		System.out.println("welcome is from controller");
@@ -169,6 +175,108 @@ public class MyController {
 	public ModelAndView displaypride(){
 		ModelAndView r8=new ModelAndView("pride");
 		System.out.println("pride also from controller");
+		return r8;
+	}
+	@RequestMapping("/greatgatsby")
+	public ModelAndView displaygreatgatsby(){
+		ModelAndView r8=new ModelAndView("greatgatsby");
+		System.out.println("greatgatsby also from controller");
+		return r8;
+	}
+	@RequestMapping("/mockbird")
+	public ModelAndView displaymockbird(){
+		ModelAndView r8=new ModelAndView("mockbird");
+		System.out.println("mockbird also from controller");
+		return r8;
+	}
+	@RequestMapping("/indaftr")
+	public ModelAndView displayindaftr(){
+		ModelAndView r8=new ModelAndView("indaftr");
+		System.out.println("indaftr also from controller");
+		return r8;
+	}
+	@RequestMapping("/indwins")
+	public ModelAndView displayindwins(){
+		ModelAndView r8=new ModelAndView("indwins");
+		System.out.println("mindwins also from controller");
+		return r8;
+	}
+	@RequestMapping("/haryport")
+	public ModelAndView displayharyport(){
+		ModelAndView r8=new ModelAndView("haryport");
+		System.out.println("haryport also from controller");
+		return r8;
+	}
+	@RequestMapping("/harold")
+	public ModelAndView displayharold(){
+		ModelAndView r8=new ModelAndView("harold");
+		System.out.println("harold also from controller");
+		return r8;
+	}
+	@RequestMapping("/bridge")
+	public ModelAndView displaybridge(){
+		ModelAndView r8=new ModelAndView("bridge");
+		System.out.println("bridge also from controller");
+		return r8;
+	}
+	@RequestMapping("/shadowof")
+	public ModelAndView displayshadowof(){
+		ModelAndView r8=new ModelAndView("shadowof");
+		System.out.println("shadowof also from controller");
+		return r8;
+	}
+	@RequestMapping("/threemistak")
+	public ModelAndView displaythreemistak(){
+		ModelAndView r8=new ModelAndView("threemistak");
+		System.out.println("threemistak also from controller");
+		return r8;
+	}
+	@RequestMapping("/whatyoun")
+	public ModelAndView displayswhatyoun(){
+		ModelAndView r8=new ModelAndView("whatyoun");
+		System.out.println("whatyoun also from controller");
+		return r8;
+	}
+	@RequestMapping("/fivepoint")
+	public ModelAndView displayfivepoint(){
+		ModelAndView r8=new ModelAndView("fivepoint");
+		System.out.println("fivepoint also from controller");
+		return r8;
+	}
+	@RequestMapping("/malgudi")
+	public ModelAndView displaymalgudi(){
+		ModelAndView r8=new ModelAndView("malgudi");
+		System.out.println("malgudi also from controller");
+		return r8;
+	}
+	@RequestMapping("/swami")
+	public ModelAndView displayswami(){
+		ModelAndView r8=new ModelAndView("swami");
+		System.out.println("swami also from controller");
+		return r8;
+	}
+	@RequestMapping("/talk")
+	public ModelAndView displaytalk(){
+		ModelAndView r8=new ModelAndView("talk");
+		System.out.println("talk also from controller");
+		return r8;
+	}
+	@RequestMapping("/sher")
+	public ModelAndView displaysher(){
+		ModelAndView r8=new ModelAndView("sher");
+		System.out.println("sher also from controller");
+		return r8;
+	}
+	@RequestMapping("/advnsher")
+	public ModelAndView displayadvnsher(){
+		ModelAndView r8=new ModelAndView("advnsher");
+		System.out.println("advnsher also from controller");
+		return r8;
+	}
+	@RequestMapping("/greatboer")
+	public ModelAndView displaygreatboer(){
+		ModelAndView r8=new ModelAndView("greatboer");
+		System.out.println("greatboer also from controller");
 		return r8;
 	}
 

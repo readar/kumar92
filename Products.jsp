@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%@include file="Header.jsp" %>
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html lang="en">
     <head> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +35,8 @@ margin: auto;
 	</head>
 	<body>
 	<div align="center">
-        <form:form action="Products" method="post" commandName="product" modelAttribute="product" enctype="multipart/form-data">
+	
+        <form:form action="products" method="post" commandName="product" modelAttribute="product" enctype="multipart/form-data">
             <table border="0">
                 <tr>
                     <td colspan="2" align="center"><h2>Manage Product</h2></td>
@@ -67,7 +69,22 @@ margin: auto;
              	<tr>
                     <td><form:label path="img">Image Upload:</form:label></td>
                     <td><form:input type="file" path="img"  /></td>
-                </tr>       
+                </tr>   
+                   
+             	<tr>
+				<td><form:label path="supplier">
+						<spring:message text="Supplier By:" />
+					</form:label></td>
+				<%-- <td><form:input path="supplier.name" required="true" /></td> --%>
+				 <td><form:select path="supplier.spname" items="${supplierList}" itemValue="spname" itemLabel="spname" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="category">
+						<spring:message text="Category belongs to:" />
+					</form:label></td>
+				<%-- <td><form:input path="category.tgname" required="true" /></td> --%>
+				<td><form:select path="category.tgname" items="${categoryList}" itemValue="tgname" itemLabel="tgname" /></td>
+			</tr>  
        
        
        
@@ -77,6 +94,8 @@ margin: auto;
             </table>
         </form:form>
     </div>
-</body>
-</html>
+
+   <%@include file="angularjs.jsp" %> 
+  <br><br><br><br><br><br><br><br><br><br>
+<%@include file="Footer.jsp" %>
 

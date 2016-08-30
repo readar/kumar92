@@ -25,20 +25,27 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.base.Controller.MyController</value>
-				<value>com.base.Controller.ProductController</value>
+    			<value>com.base.Controller.MyController</value>
 				<value>com.base.Controller.CategoryController</value>
 				<value>com.base.model.Category</value>
-				<value>com.base.model.Product</value>
-				<value>com.base.model.Supplier</value>
-				<value>com.base.model.User</value>
 				<value>com.base.dao.CategoryDAOImpl</value>
-				<value>com.base.dao.SupplierDAOImpl</value>
-				<value>com.base.dao.ProductDAOImpl</value>
-				<value>com.base.dao.UserDAOImpl</value>
+		        <value>com.base.service.CategoryService</value> 
+		        
+				<value>com.base.model.User</value>
+				<value>com.base.Controller.LogiController</value>
+				 <value>com.base.model.UserRole</value> 
 				<value>com.base.service.UserService</value>
+				<value>com.base.dao.UserDAOImpl</value>		
+				
+				<value>com.base.model.Supplier</value>		
+				<value>com.base.dao.SupplierDAOImpl</value>
+				<value>com.base.Controller.SupplierController</value>
+				<value>com.base.service.SupplierService</value>
+				
+				<value>com.base.model.Product</value>
+				<value>com.base.Controller.ProductController</value>
+				<value>com.base.dao.ProductDAOImpl</value>
 				<value>com.base.service.ProductService</value>
-				<value>com.base.service.CategoryService</value>
 			</list>
 		</property>
 

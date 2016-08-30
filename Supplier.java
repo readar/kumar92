@@ -1,9 +1,16 @@
 package com.base.model;
 
+
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -17,20 +24,19 @@ public class Supplier {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int spid;
-	private int gtid;
+	
+	@Column(name="SupplierName")
 	private String spname;
+	
+
+	@Column(name="Address")
 	private String spaddress;
+	
 	public int getSpid() {
 		return spid;
 	}
 	public void setSpid(int spid) {
 		this.spid = spid;
-	}
-	public int getGtid() {
-		return gtid;
-	}
-	public void setGtid(int gtid) {
-		this.gtid = gtid;
 	}
 	public String getSpname() {
 		return spname;
@@ -44,6 +50,22 @@ public class Supplier {
 	public void setSpaddress(String spaddress) {
 		this.spaddress = spaddress;
 	}
+	
+/*	@OneToMany(mappedBy="supplier",orphanRemoval=true)
+	public List<Product> products;*/
+	
+	@OneToMany(cascade=CascadeType.ALL,mappedBy="supplier")
+	private Set<Product> product;
+
+	public Set<Product> getProduct() {
+		return product;
+	}
+	public void setProduct(Set<Product> product) {
+		this.product = product;
+	}
+	
+
+	
 	
 	
 }

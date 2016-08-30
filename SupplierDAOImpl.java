@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
 
 import com.base.model.Supplier;
 
@@ -30,7 +32,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	public void saveOrUpdate(Supplier supplier) {
 	Transaction t = sessionFactory.getCurrentSession().beginTransaction();
 
-	sessionFactory.getCurrentSession().saveOrUpdate(supplier);
+	sessionFactory.openSession().saveOrUpdate(supplier);
 	t.commit();
 	}
 
@@ -43,7 +45,7 @@ public void delete(int id) {
 	
 	
 }
-
+@Transactional
 public Supplier get(int id) {
 	String hql = "from Supplier where id=" + "'"+ id +"'";
 	Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
@@ -58,6 +60,8 @@ public Supplier get(int id) {
 
 	@Transactional
 	public List<Supplier> list() {
+		//Transaction t=sessionFactory.getCurrentSession().beginTransaction();
+		//t.commit();
 	@SuppressWarnings("unchecked")
 	List<Supplier> listSupplier = (List<Supplier>)
 	sessionFactory.getCurrentSession()
@@ -65,6 +69,27 @@ public Supplier get(int id) {
 	.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
 	
 		return listSupplier;
+	}
+
+	@Transactional
+	public Supplier getByName(String spname) {
+
+	   String hql = "from Supplier where suppliername=" + "'"+ spname +"'";
+	
+		Query query = (Query) sessionFactory.openSession().createQuery(hql);
+		List<Supplier> listSupplier = (List<Supplier>)  query.list();
+		
+		if  (listSupplier != null && !listSupplier.isEmpty()){
+			return listSupplier.get(0);
+			
+		}
+   		return null;
+   		
+/*	//	System.out.println("getting data in dao based on name");
+		Session session=this.sessionFactory.getCurrentSession();
+		Supplier supplier=(Supplier) session.get(Supplier.class,spname);
+		System.out.println("data of user by name="+supplier);
+		return supplier;*/	
 	}
 	
 	

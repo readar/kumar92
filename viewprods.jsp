@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+      
+<%@include file="Header.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +77,7 @@ Enter Product Name:  <input type="text"  ng-model="search">&nbsp&nbsp<span class
     <th>Product Description</th>
     <th>Product Author</th>
     <th>Product Price</th>
-    <th>Product  Image</th>
+    <th>Product Quantity</th>
     </tr>
         <tr ng-repeat="resource in names | filter:search">
             <td>{{resource.ptid}}</td>
@@ -83,9 +85,10 @@ Enter Product Name:  <input type="text"  ng-model="search">&nbsp&nbsp<span class
             <td>{{resource.ptdescription}}</td>
             <td>{{resource.ptauthor}}</td>
             <td>{{resource.ptprice}}</td>
-            <td><img src="resources/images/{resource.ptname}.jpg" style="width: 200px;height:150px"></td>
+            <td>{{resource.ptquantity}}</td>
             
-          <td><a href="deleteItem?ptid={{resource.ptid}}">Delete</a></td>
+            <td><a href="viewimg?ptid={{resource.ptid}}">View More</a></td>
+
         </tr>    
     </table>
 </div>
@@ -101,7 +104,6 @@ angular.module('myApp',[]).controller('dataCtrl',function($scope)
 			}
 		});
 </script>
-</div>
-</div>
-</body>
-</html>
+<br><br><br><br><br><br>
+  
+<%@include file="Footer.jsp" %>

@@ -2,6 +2,8 @@ package com.base.dao;
 
 import java.util.List;
 
+
+
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -46,7 +48,12 @@ public class ProductDAOImpl implements ProductDAO {
 		
 	    @Transactional
 		public Product get(int id) {
-	    	Session session=sessionfactory.getCurrentSession();
+/*	    	EntityManager em = entityManagerFactory.createEntityManager();
+	    	Order order = em.find(Order.class, 111);
+	    	System.out.println("Customer details for order 111 : " + order.getCustomer());
+	    	em.close();
+	    	entityManagerFactory.close();*/
+         	Session session=sessionfactory.getCurrentSession();
 			Transaction transaction=session.beginTransaction();
 			Product product=session.load(Product.class,new Integer(id));
 			return product;
@@ -83,7 +90,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 			
 		
-		@Transactional
+		
 			public List<Product> list() {
 			Session s = sessionfactory.getCurrentSession();
 			Transaction tx = s.beginTransaction();
@@ -97,6 +104,7 @@ public class ProductDAOImpl implements ProductDAO {
 			Session session=sessionfactory.getCurrentSession();
 			Transaction transaction=session.beginTransaction();
 			session.update(product);
+			session.flush();
 			transaction.commit();
 			System.out.println("updated");
 		}
