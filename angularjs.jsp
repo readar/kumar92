@@ -118,7 +118,7 @@ function MyController($scope, $http) {
            		
           
            		
-           		<td><a href="deleteItem?ptid={{p1.ptid}}">Delete</a></td>
+           	
            		
            	
       </tr>

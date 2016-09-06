@@ -32,7 +32,7 @@
 <td>${product.ptprice}</td>
 <td>${product.ptquantity}</td>
 <td><img src="resources/images/${product.ptname}.jpg" style=height:200px;width:200px;"/></td>
-<td><a href="cart">Add this one to Cart</a>
+<td><a href="UserCheck">Want to buy this,Then Login</a>
 </tr>
 
 </table>

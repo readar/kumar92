@@ -1,13 +1,18 @@
 package com.base.Controller;
 
 import java.security.Principal;
+import java.util.Collection;
 
 import javax.servlet.http.HttpServletRequest;
-
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,21 +56,63 @@ public class LogiController {
 		}
 		System.out.println("in register controller");
 		us.saveOrUpdate(user);
-		ModelAndView mv = new ModelAndView("Log");
+		ModelAndView mv = new ModelAndView("login");
 		return mv;
 	}
 	
-	@RequestMapping("/UserCheck")
+	@SuppressWarnings("unchecked")
+	@RequestMapping(value = "/login_session_attributes")
+	public String login_session_attributes(HttpSession session,ModelMap model) {
+		String name = SecurityContextHolder.getContext().getAuthentication().getName();
+	//	User user = us.getusername(name);
+	//	session.setAttribute("userId", user.getUserId());
+		session.setAttribute("username", name);
+    	session.setAttribute("LoggedIn", "true");
+
+		Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) SecurityContextHolder.getContext()
+		.getAuthentication().getAuthorities();
+		String role="ROLE_USER";
+		for (GrantedAuthority authority : authorities) 
+		{
+		  
+		     if (authority.getAuthority().equals(role)) 
+		     {
+		    	 session.setAttribute("UserLoggedIn", "true");
+		    
+		//    	 session.setAttribute("cartsize",cartDAO.cartsize((int)session.getAttribute("userId")));
+		    	 return "Welcomepage";
+		     }
+		     else 
+		     {
+		    	 session.setAttribute("Administrator", "true");
+	//	    	 model.addAttribute("product",  new Product());
+	//	    	 model.addAttribute("ProductPageClicked", "true");
+	//	    	 model.addAttribute("supplierList",supplierDAO.list());
+	//	    	 model.addAttribute("categoryList",categoryDAO.list());
+			 }
+		}
+		return "Admin";
+	}
+	
+	@RequestMapping("/do_out")
+	public ModelAndView doout(){
+		ModelAndView mv=new ModelAndView("Novels");
+		return mv;
+	}
+	
+	
+	
+/*	@RequestMapping("/UserCheck")
 	public ModelAndView usercheck(Principal principal){
 		System.out.println("it is of usercheck");
-		return new ModelAndView("Novels");
+		return new ModelAndView("Welcomepage");
 	}
 	@RequestMapping("/AdminCheck")
 	public ModelAndView admincheck(Principal principal){
 		System.out.println("it is of admincheck");
 		return new ModelAndView("Admin");
 	}
-/*	@RequestMapping("/logout")
+	@RequestMapping("/logout")
 	public ModelAndView logout(Principal principal,HttpServletRequest request){
 		
 	//	session.invalidate();
@@ -73,8 +120,8 @@ public class LogiController {
 		
 		return new ModelAndView("logout");
 	}
-	*/
-/*	@RequestMapping("/logout")
+	
+	@RequestMapping("/logout")
 	public String logout(HttpServletRequest request)
 	{
 	request.getSession().invalidate();
@@ -82,12 +129,12 @@ public class LogiController {
 
 	return "Log";
 	}*/
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+/*	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login(
 		@RequestParam(value = "error", required = false) String error,
 		@RequestParam(value = "logout", required = false) String logout){
     
 	ModelAndView mv=new ModelAndView("login");
 	return mv;
-}
+}*/
 }

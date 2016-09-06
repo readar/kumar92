@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+
+<%@include file="Header.jsp" %>
+<%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
   
     
@@ -19,8 +21,8 @@ background-size:cover;
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <br>
-<body>
-<!-- <nav class="navbar navbar-inverse">
+<body> --%>
+<%--  <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
  <a class="navbar-brand" href="#">RE@DAR NOVELS</a>
@@ -34,10 +36,11 @@ background-size:cover;
     <ul class="nav navbar-nav navbar-right">
       <li><a href="RegisterPage"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
 
-      <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li><a href="perform_logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
-</nav> -->
+</nav> 
+<center><h3>Hi ${username}</h3></center> --%>
 <br/><br />
 
 
@@ -95,7 +98,7 @@ background-size:cover;
   <br><br><br>
   <br><br><br>
   <br><br><br>
-  <br><br><br><br><br>
+  <br><br><br>
   
 <%@include file="Footer.jsp" %>
 
