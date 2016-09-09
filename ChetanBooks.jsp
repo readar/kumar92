@@ -17,19 +17,19 @@ background-color:lightblue;
 <div class="container">
      <div class="row">
     <div class="col-md-4">
-      <a href="resources/images/che1.JPG" class="thumbnail">
+      <a href="threemistak" class="thumbnail">
         <img src="resources/images/che1.JPG" alt="thrilling"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/che2.jpg" class="thumbnail">
+      <a href="whatyoun" class="thumbnail">
         <img src="resources/images/che2.jpg" alt="comic"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/che3.jpg" class="thumbnail">
+      <a href="fivepoint" class="thumbnail">
         
         <img src="resources/images/che3.jpg" alt="fantsy"  style="width:500px;height:420px">
       </a>

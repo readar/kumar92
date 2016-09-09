@@ -17,7 +17,7 @@ background-color:pink;
      <div class="row">
     <div class="col-md-4">
       <a href="Thrill" class="thumbnail">
-        <img src="resources/images/pic17.jpg" alt="thrilling"  style="width:500px;height:220px">
+        <img src="resources/images/pic17.jpg" alt="thrilling"  style="width:500px;height:420px">
       </a>
     </div>
     
@@ -25,27 +25,16 @@ background-color:pink;
     <div class="col-md-4">
       <a href="fantasy" class="thumbnail">
         
-        <img src="resources/images/pic18.jpg" alt="fantsy"  style="width:500px;height:220px">
+        <img src="resources/images/pic18.jpg" alt="fantsy"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
        <a href="Adventure" class="thumbnail">
-         <img src="resources/images/pic19.jpg" alt="adventure"  style="width:500px;height:220px">
+         <img src="resources/images/pic19.jpg" alt="adventure"  style="width:500px;height:420px">
       </a>
     </div>
-    <div class="col-md-4">
-      <a href="Business" class="thumbnail">
-        
-        <img src="resources/images/pic20.jpg" alt="business"  style="width:500px;height:220px">
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a href="Horror" class="thumbnail">
-        
-        <img src="resources/images/pic21.png" alt="horror"  style="width:500px;height:220px">
-      </a>
-    </div>
+
 </div></div>
 
 </body>

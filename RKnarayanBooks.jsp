@@ -17,19 +17,19 @@ background-color:lightblue;
 <div class="container">
      <div class="row">
     <div class="col-md-4">
-      <a href="resources/images/rk1.jpg" class="thumbnail">
+      <a href="malgudi" class="thumbnail">
         <img src="resources/images/rk1.jpg" alt="thrilling"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/rk2.jpg" class="thumbnail">
+      <a href="swami" class="thumbnail">
         <img src="resources/images/rk2.jpg" alt="comic"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/rk3.jpg" class="thumbnail">
+      <a href="talk" class="thumbnail">
         
         <img src="resources/images/rk3.jpg" alt="fantsy"  style="width:500px;height:420px">
       </a>

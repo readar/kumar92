@@ -17,19 +17,19 @@ background-color:lightblue;
 <div class="container">
      <div class="row">
     <div class="col-md-4">
-      <a href="resources/images/c1.jpg" class="thumbnail">
+      <a href="haryport" class="thumbnail">
         <img src="resources/images/c1.jpg" alt="thrilling"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/c2.jpg" class="thumbnail">
+      <a href="harold" class="thumbnail">
         <img src="resources/images/c2.jpg" alt="comic"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/c3.jpg" class="thumbnail">
+      <a href="bridge" class="thumbnail">
         
         <img src="resources/images/c3.jpg" alt="fantsy"  style="width:500px;height:420px">
       </a>

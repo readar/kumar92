@@ -64,9 +64,7 @@ public class LogiController {
 	@RequestMapping(value = "/login_session_attributes")
 	public String login_session_attributes(HttpSession session,ModelMap model) {
 		String name = SecurityContextHolder.getContext().getAuthentication().getName();
-	//	User user = us.getusername(name);
-	//	session.setAttribute("userId", user.getUserId());
-		session.setAttribute("username", name);
+	session.setAttribute("username", name);
     	session.setAttribute("LoggedIn", "true");
 
 		Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) SecurityContextHolder.getContext()
@@ -79,16 +77,12 @@ public class LogiController {
 		     {
 		    	 session.setAttribute("UserLoggedIn", "true");
 		    
-		//    	 session.setAttribute("cartsize",cartDAO.cartsize((int)session.getAttribute("userId")));
 		    	 return "Welcomepage";
 		     }
 		     else 
 		     {
 		    	 session.setAttribute("Administrator", "true");
-	//	    	 model.addAttribute("product",  new Product());
-	//	    	 model.addAttribute("ProductPageClicked", "true");
-	//	    	 model.addAttribute("supplierList",supplierDAO.list());
-	//	    	 model.addAttribute("categoryList",categoryDAO.list());
+	
 			 }
 		}
 		return "Admin";

@@ -12,7 +12,7 @@ background-color:pink;
 }
 p {
     font-family: regular;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     color:red;
 }
@@ -22,38 +22,31 @@ p {
 
 <div class="container">
      <div class="row">
-    <div class="col-md-3" class="thumbnail">
+    <div class="col-md-4" class="thumbnail">
       <a href="ChetanBooks">
-        <img src="resources/images/ar1.jpg" alt="thrilling"  style="width:280px;height:420px">
+        <img src="resources/images/ar1.jpg" alt="thrilling"  style="width:370px;height:420px">
 
       </a>
 <p>CHETAN BHAGAT</p>
     </div>
     
     
-    <div class="col-md-3" class="thumbnail">
+    <div class="col-md-4" class="thumbnail">
       <a href="RKnarayanBooks">
-    <img src="resources/images/ar2.jpg" alt="thrilling"  style="width:280px;height:420px">
+    <img src="resources/images/ar2.jpg" alt="thrilling"  style="width:370px;height:420px">
 
       </a>
       <p>R.K.NARAYAN</p>
     </div>
  
-    <div class="col-md-3" class="thumbnail">
+    <div class="col-md-4" class="thumbnail">
        <a href="SirArthurBooks">
-         <img src="resources/images/ar3.jpg" alt="adventure"  style="width:280px;height:420px">
+         <img src="resources/images/ar3.jpg" alt="adventure"  style="width:370px;height:420px">
      
  </a>
  <p>SIR ARTHUR CANON DAYLE</p>
     </div>
-    <div class="col-md-3" class="thumbnail">
-      <a href="Ronaldsegalbooks">
-        
-        <img src="resources/images/ar4.jpg" alt="business"  style="width:280px;height:420px">
-    
-</a>
-<p>RONALD SEGAL</p>  
-    </div>
+
 
      </div>
       </div>

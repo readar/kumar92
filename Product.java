@@ -12,7 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-
+import javax.validation.constraints.Min;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
@@ -31,9 +31,9 @@ public class Product {
 	private String ptname;
 	private String ptdescription;
 	private String ptauthor;
-	
+	@Min(1)
 	private int ptprice;
-	
+	@Min(1)
 	private int ptquantity;
 	
 	

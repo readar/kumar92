@@ -73,11 +73,14 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 
+	
 	public User getusername(String name) {
 		System.out.println("getting data in dao based on name");
 		Session session = this.sessionFactory.getCurrentSession();
+	//	Transaction tx=session.beginTransaction();
 		User user = (User) session.get(User.class, name);
-		System.out.println("data of user by name=" + user);
+	//	tx.commit();
+		System.out.println("data of user by name=" + name);
 		return user;
 
 	}

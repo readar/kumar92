@@ -9,16 +9,16 @@ public class MyController {
 	
 	@RequestMapping("/")
 	public ModelAndView displaywelcomepage(){
-		ModelAndView v1=new ModelAndView("Welcomepage");
+		ModelAndView v1=new ModelAndView("Novels");
 		System.out.println("Welcome is from controller");
 		return v1;
 	}
-	@RequestMapping("/Admin")
+/*	@RequestMapping("/Admin")
 	public ModelAndView displayadminpage(){
 		ModelAndView v1=new ModelAndView("Admin");
 		System.out.println("Welcome is from controller");
 		return v1;
-	}
+	}*/
 	@RequestMapping("/cart")
 	public ModelAndView displaycartpage(){
 		ModelAndView v1=new ModelAndView("cart");
@@ -26,19 +26,19 @@ public class MyController {
 		return v1;
 	}
 	
-	@RequestMapping("/Welcomepage")
+	@RequestMapping("/novels")
 	public ModelAndView displayHomepage(){
-		ModelAndView q1=new ModelAndView("Welcomepage");
+		ModelAndView q1=new ModelAndView("Novels");
 		System.out.println("welcome is from controller");
 		return q1;
 	}
 	
-	@RequestMapping("/Novels")
+/*	@RequestMapping("/Novels")
 	public ModelAndView displaynovelpage(){
 		ModelAndView q1=new ModelAndView("Novels");
 		System.out.println("Novels is from controller");
 		return q1;
-	}
+	}*/
 	@RequestMapping("/Product")
 	public ModelAndView displayProductpage(){
 		ModelAndView q2=new ModelAndView("Product");
@@ -87,42 +87,7 @@ public class MyController {
 		System.out.println("children also from controller");
 		return v7;
 	}	
-	@RequestMapping("/fearstreet")
-	public ModelAndView displayBiopage(){
-		ModelAndView v8=new ModelAndView("fearstreet");
-		System.out.println("fearstreet also from controller");
-		return v8;
-	}	
-	@RequestMapping("/inheart")
-	public ModelAndView displayAwardpage(){
-		ModelAndView v9=new ModelAndView("inheart");
-		System.out.println("inheart also from controller");
-		return v9;
-	}	
-	@RequestMapping("/ChetanBooks")
-	public ModelAndView displayChetanBookspage(){
-		ModelAndView r1=new ModelAndView("ChetanBooks");
-		System.out.println("ChetanBooks also from controller");
-		return r1;
-	}
-	@RequestMapping("/RKnarayanBooks")
-	public ModelAndView displayRKnarayanBookspage(){
-		ModelAndView r2=new ModelAndView("RKnarayanBooks");
-		System.out.println("RKnarayanBooks also from controller");
-		return r2;
-	}
-	@RequestMapping("/devilgate")
-	public ModelAndView displayRonaldsegalbookspage(){
-		ModelAndView r3=new ModelAndView("devilgate");
-		System.out.println("devilgate also from controller");
-		return r3;
-	}
-	@RequestMapping("/SirArthurBooks")
-	public ModelAndView displaySirArthurBookspage(){
-		ModelAndView r4=new ModelAndView("SirArthurBooks");
-		System.out.println("SirArthurBooks also from controller");
-		return r4;
-	}
+
 	@RequestMapping("/Thrill")
 	public ModelAndView displayThrillpage(){
 		ModelAndView r5=new ModelAndView("Thrill");
@@ -141,17 +106,17 @@ public class MyController {
 		System.out.println("Adventure also from controller");
 		return r7;
 	}
-	@RequestMapping("/icefor")
-	public ModelAndView displayBusinesspage(){
-		ModelAndView r8=new ModelAndView("icefor");
-		System.out.println("icefor also from controller");
-		return r8;
-	}
 	@RequestMapping("/Horror")
 	public ModelAndView displayHorrorpage(){
 		ModelAndView r9=new ModelAndView("Horror");
 		System.out.println("Horror also from controller");
 		return r9;
+	}
+/*	@RequestMapping("/icefor")
+	public ModelAndView displayBusinesspage(){
+		ModelAndView r8=new ModelAndView("icefor");
+		System.out.println("icefor also from controller");
+		return r8;
 	}
 	@RequestMapping("/storm")
 	public ModelAndView displaystormpage(){
@@ -279,5 +244,41 @@ public class MyController {
 		System.out.println("greatboer also from controller");
 		return r8;
 	}
+		@RequestMapping("/fearstreet")
+	public ModelAndView displayBiopage(){
+		ModelAndView v8=new ModelAndView("fearstreet");
+		System.out.println("fearstreet also from controller");
+		return v8;
+	}	
+	@RequestMapping("/inheart")
+	public ModelAndView displayAwardpage(){
+		ModelAndView v9=new ModelAndView("inheart");
+		System.out.println("inheart also from controller");
+		return v9;
+	}	
+	@RequestMapping("/ChetanBooks")
+	public ModelAndView displayChetanBookspage(){
+		ModelAndView r1=new ModelAndView("ChetanBooks");
+		System.out.println("ChetanBooks also from controller");
+		return r1;
+	}
+	@RequestMapping("/RKnarayanBooks")
+	public ModelAndView displayRKnarayanBookspage(){
+		ModelAndView r2=new ModelAndView("RKnarayanBooks");
+		System.out.println("RKnarayanBooks also from controller");
+		return r2;
+	}
+	@RequestMapping("/devilgate")
+	public ModelAndView displayRonaldsegalbookspage(){
+		ModelAndView r3=new ModelAndView("devilgate");
+		System.out.println("devilgate also from controller");
+		return r3;
+	}
+	@RequestMapping("/SirArthurBooks")
+	public ModelAndView displaySirArthurBookspage(){
+		ModelAndView r4=new ModelAndView("SirArthurBooks");
+		System.out.println("SirArthurBooks also from controller");
+		return r4;
+	}*/
 
 }

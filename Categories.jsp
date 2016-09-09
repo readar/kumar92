@@ -17,13 +17,13 @@ background-color:pink;
      <div class="row">
     <div class="col-md-4">
       <a href="Literature" class="thumbnail">
-        <img src="resources/images/pic9.jpg" alt="literature"  style="width:500px;height:220px">
+        <img src="resources/images/pic9.jpg" alt="literature"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
       <a href="history" class="thumbnail">
-        <img src="resources/images/pic8.png" alt="history"  style="width:500px;height:220px">
+        <img src="resources/images/pic8.png" alt="history"  style="width:500px;height:420px">
       </a>
     </div>
         
@@ -31,21 +31,10 @@ background-color:pink;
     
       <a href="children" class="thumbnail">
         
-        <img src="resources/images/pic15.jpg" alt="children"  style="width:500px;height:220px">
+        <img src="resources/images/pic15.jpg" alt="children"  style="width:500px;height:420px">
       </a>
     </div>
-    <div class="col-md-4">
-      <a href="Biog" class="thumbnail">
-        
-        <img src="resources/images/pic12.jpg" alt="BIo"  style="width:500px;height:220px">
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a href="Award" class="thumbnail">
-        
-        <img src="resources/images/pic13.jpg" alt="Award"  style="width:500px;height:220px">
-      </a>
-    </div>
+
   </div>
 </div>
 </body>

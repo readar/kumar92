@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@include file="Header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +36,7 @@ p {
 </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<!-- <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
  <a class="navbar-brand" href="#">RE@DAR NOVELS</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -50,7 +51,7 @@ p {
     </ul>
   </div>
 </nav>
-
+ -->
 <h1><i><u>REVOLUTIONARY READAR NOVELS</u></i></h1>
 <p><h5>THE BEST SITE FOR ONLINE SELLING BOOKS AVAILABLE FOR YOU</h5></p>
 
@@ -124,6 +125,6 @@ p {
   </div>
 </div>
 
-
-</body>
-</html>
+<br><br><br><br>
+  
+<%@include file="Footer.jsp" %>

@@ -17,19 +17,19 @@ background-color:lightblue;
 <div class="container">
      <div class="row">
     <div class="col-md-4">
-      <a href="resources/images/t1.jpg" class="thumbnail">
+      <a href="gonegirl" class="thumbnail">
         <img src="resources/images/t1.jpg" alt="thrilling"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/t2.jpg" class="thumbnail">
+      <a href="mockbird" class="thumbnail">
         <img src="resources/images/t2.jpg" alt="comic"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/t3.jpg" class="thumbnail">
+      <a href="shadowof" class="thumbnail">
         
         <img src="resources/images/t3.jpg" alt="fantsy"  style="width:500px;height:420px">
       </a>

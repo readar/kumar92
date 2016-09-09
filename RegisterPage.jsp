@@ -20,7 +20,7 @@
 </head>
 <body>
 <br><br><br><br><br><br><br><br><br>
-<center><h2><font color="magenta">Sign Up!</font></h2></center>
+<h1><font color="magenta">Sign Up!</font></h1>
 
  <!--<form method ="post" action="register">
    <center>
@@ -62,6 +62,9 @@
 <tr>
 <td>Password : </td>
 <td><form:password path="password"/><form:errors path="password" style="color:red"></form:errors></td></tr>
+<tr>
+<td>Confirm Password : </td>
+<td><form:password path="confirmpassword"/><form:errors path="confirmpassword" style="color:red"></form:errors></td></tr>
 <tr>
 <td>EmaiId :</td>
 <td><form:input path="email"/><form:errors path="email" style="color:red"></form:errors></td></tr>

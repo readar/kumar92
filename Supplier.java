@@ -1,8 +1,9 @@
 package com.base.model;
 
 
+
 import java.util.List;
-import java.util.Set;
+
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -11,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -51,21 +53,27 @@ public class Supplier {
 		this.spaddress = spaddress;
 	}
 	
-/*	@OneToMany(mappedBy="supplier",orphanRemoval=true)
-	public List<Product> products;*/
-	
-	@OneToMany(cascade=CascadeType.ALL,mappedBy="supplier")
-	private Set<Product> product;
+/*    @OneToMany(cascade=CascadeType.ALL,mappedBy="supplier",orphanRemoval=true)
+	public List<Product> product;
 
-	public Set<Product> getProduct() {
+	public List<Product> getProduct() {
 		return product;
 	}
-	public void setProduct(Set<Product> product) {
+	public void setProduct(List<Product> product) {
+		this.product = product;
+	}*/
+    
+    
+	
+	@OneToMany(cascade=CascadeType.ALL,mappedBy="supplier")
+	private List<Product> product;
+
+	public List<Product> getProduct() {
+		return product;
+	}
+	public void setProduct(List<Product> product) {
 		this.product = product;
 	}
 	
 
-	
-	
-	
 }

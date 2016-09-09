@@ -17,19 +17,19 @@ background-color:lightblue;
 <div class="container">
      <div class="row">
     <div class="col-md-4">
-      <a href="resources/images/ad1.jpg" class="thumbnail">
+      <a href="devilgate" class="thumbnail">
         <img src="resources/images/ad1.jpg" alt="thrilling"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/ad2.jpg" class="thumbnail">
+      <a href="inheart" class="thumbnail">
         <img src="resources/images/ad2.jpg" alt="comic"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/ad3.png" class="thumbnail">
+      <a href="fearstreet" class="thumbnail">
         
         <img src="resources/images/ad3.png" alt="fantsy"  style="width:500px;height:420px">
       </a>

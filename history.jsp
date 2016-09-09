@@ -17,28 +17,19 @@ background-color:lightblue;
 
 <div class="container">
     <div class="row">
-    <div class="col-md-3">
-      <a href="resources/images/h1.jpg" class="thumbnail">
-        <img src="resources/images/h1.jpg" alt="unitedstates"  style="width:300px;height:420px">
-      </a>
-    </div>
+
     
-    <div class="col-md-3">
-      <a href="resources/images/h2.jpg" class="thumbnail">
-        <img src="resources/images/h2.jpg" alt="lastmughal"  style="width:300px;height:420px">
-      </a>
-    </div>
     
-    <div class="col-md-3">
-      <a href="resources/images/h3.jpg" class="thumbnail">
+    <div class="col-md-4">
+      <a href="indwins" class="thumbnail">
         
-        <img src="resources/images/h3.jpg" alt="india freedom"  style="width:300px;height:420px">
+        <img src="resources/images/h3.jpg" alt="india freedom"  style="width:500px;height:420px">
       </a>
     </div>
-    <div class="col-md-3">
-      <a href="resources/images/h4.jpg" class="thumbnail">
+    <div class="col-md-4">
+      <a href="indaftr" class="thumbnail">
         
-        <img src="resources/images/h4.jpg" alt="after gandhi"  style="width:300px;height:420px">
+        <img src="resources/images/h4.jpg" alt="after gandhi"  style="width:500px;height:420px">
       </a>
     </div>
 </div>

@@ -44,7 +44,11 @@ background-color:white;
 </div>
 </nav>
 <div align="center">
-<form:form action="updateproduct" method="post" commandName="product" modelAttribute="product" enctype="multipart/form-data">
+<%-- <form:form action="updateproduct" method="post" commandName="product" modelAttribute="product" enctype="multipart/form-data"> --%>
+        <form:form action="${pageContext.request.contextPath}/admin/product/edit"
+                   method="post" commandName="product" enctype="multipart/form-data">
+
+         <form:hidden path="productid" value="${product.ptid}" />
 <table border="0">
 <tr><td>
 <center><td colspan="0" align="center"><h2>Manage Product</h2></td></center>
@@ -70,7 +74,7 @@ background-color:white;
                  </table>
                  
                 <tr><td>
-                <a href="updateProduct" class="btn btn-info" role="button">Update Product</a>
+                <a href="submit" class="btn btn-info" role="button">Update Product</a>
                 
              <h5 colspan="0" align="center" ><input type="reset" value="Cancel"></h5>
            

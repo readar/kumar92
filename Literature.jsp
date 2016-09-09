@@ -17,19 +17,19 @@ background-color:lightblue;
 <div class="container">
      <div class="row">
     <div class="col-md-4">
-      <a href="resources/images/l1.jpg" class="thumbnail">
+      <a href="greatgatsby" class="thumbnail">
         <img src="resources/images/l1.jpg" alt="great gatsby"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/l2.jpg" class="thumbnail">
+      <a href="mockbird" class="thumbnail">
         <img src="resources/images/l2.jpg" alt="mockingbird"  style="width:500px;height:420px">
       </a>
     </div>
     
     <div class="col-md-4">
-      <a href="resources/images/l3.jpg" class="thumbnail">
+      <a href="pride" class="thumbnail">
         
         <img src="resources/images/l3.jpg" alt="pride & prejudice"  style="width:500px;height:420px">
       </a>

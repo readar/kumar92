@@ -19,13 +19,18 @@ background-size: cover;
 </style>
 </head>
 <body>
-
-<a href="Novels" style="float:right;color:red"><h3>Click here to Enter to the Site</h3></a>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h3 style="color:red;float:right">Hi ${username},you logged in</h3>
+<!-- <a href="Novels" style="float:right;color:red"><h3>Click here to Enter to the Site</h3></a>-->
+<br><br><br><br><br><br>
 <center>
-<h1 style="color:maroon">WELCOME TO ONLINE NOVEL STORE</h1>
+<h1 style="color:#F00CCD">WELCOME TO ONLINE NOVEL STORE</h1>
 </center>
 <br><br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br>
    <div id="footer"><%@include file="Footer.jsp" %></div>
 </body>
 </html>
